@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','videos','playlist','utils.module','api-client.module', 'firebase','youtube-embed'])
+angular.module('starter', ['ionic', 'starter.controllers','videos','pdfs','playlist','utils.module','api-client.module', 'firebase','youtube-embed'])
 
     .run(function ($ionicPlatform) {
       $ionicPlatform.ready(function () {
@@ -36,18 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers','videos','playlist','u
           })
 
          
-          .state('app.appointments', {
-            url: '/appointments',
-            cache: false,
-            views: {
-              'menuContent': {
-                templateUrl: 'app/appointments/appointments.html',
-                controller: 'appointmentsCtrl',
-
-              }
-            }
-
-          })
+         
            .state('app.videos', {
             url: '/videos',
             cache: false,
@@ -79,13 +68,13 @@ angular.module('starter', ['ionic', 'starter.controllers','videos','playlist','u
 
           })
 
-          .state('app.supplies', {
-            url: '/supplies',
+          .state('app.pdfs', {
+            url: '/pdfs',
             cache: false,
             views: {
               'menuContent': {
-                templateUrl: 'app/supplies/supplies.html',
-                controller: 'suppliesCtrl',
+                templateUrl: 'app/pdfs/pdfs.html',
+                controller: 'pdfsCtrl',
 
               }
             }
