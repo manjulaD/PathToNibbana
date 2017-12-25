@@ -1,0 +1,14 @@
+<ion-view view-title="Video Playlists">
+    <ion-content class="masters">
+        <div class="card" ng-repeat="appointment in appointmentsUpcoming" ng-click="onClick(appointment)" href="#/app/playlist/{{appointment.id}}">
+            <div class="row">
+            <div style="width:35%"> <img src={{appointment.snippet.thumbnails.high.url}}  style="width:100%"></img></div>
+                
+                <div class="appointments-header" style="width:65%"> {{appointment.snippet.title}}
+                </div>
+                
+               
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

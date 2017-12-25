@@ -1,0 +1,20 @@
+<ion-view view-title="{{$scope.playlistId.title}}">
+    <ion-content class="masters">
+        <div class="row appointments-header">
+            {{video.snippet.title}}
+        </div>
+        <div class="card" ng-repeat="video in playlist" ng-click="onClick()">
+            <div class="row appointments-header">
+                {{video.snippet.title}}
+            </div>
+            <div>
+                <!--<img src={{video.snippet.thumbnails.high.url}}  style="
+    width: 100%"></img>-->
+
+                <youtube-video video-id="video.snippet.resourceId.videoId" player-width="'100%'"></youtube-video>
+            </div>
+
+
+        </div>
+    </ion-content>
+</ion-view>

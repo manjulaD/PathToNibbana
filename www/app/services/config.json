@@ -1,0 +1,57 @@
+{
+  "appConfig": {
+    "appConsumerId": "PathToNibbana",
+    "loadingIndicatorTimeout": 60000,
+    "serviceCallTimeout": 60000,
+    "clientSideSessionTimeout": 180
+  },
+  "apiService": {
+    "severUrl": "",
+    "severFingerprint": "",
+    "baseUrl": "https://www.googleapis.com/youtube/v3",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "endpoints": {
+      
+      
+
+       
+      "getPlaylists": {
+        "urlPath": "/playlists",
+        "method": "GET",
+        "retryCount": 0,
+        "serviceTimeout": 240000,
+        "headers": {
+          "Content-type": "application/json"
+        },
+        "pathParams": {},
+        "queryParams": {}
+      },
+
+      "getPlaylist": {
+        "urlPath": "/playlistItems",
+        "method": "GET",
+        "retryCount": 0,
+        "serviceTimeout": 240000,
+        "headers": {
+          "Content-type": "application/json"
+        },
+        "pathParams": {},
+        "queryParams": {}
+      },
+      
+      "getOrders": {
+        "urlPath": "/order/myorders/:userId",
+        "method": "GET",
+        "retryCount": 0,
+        "serviceTimeout": 240000,
+        "headers": {
+          "Content-type": "application/json"
+        },
+        "pathParams": {},
+        "queryParams": {}
+      }
+    }
+  }
+}
