@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','videos','pdfs','playlist','utils.module','api-client.module', 'firebase','youtube-embed'])
+angular.module('starter', ['ionic', 'starter.controllers','videos','announcements','firebase','pdfs','playlist','utils.module','api-client.module', 'firebase','youtube-embed'])
 
     .run(function ($ionicPlatform) {
       $ionicPlatform.ready(function () {
@@ -81,17 +81,30 @@ angular.module('starter', ['ionic', 'starter.controllers','videos','pdfs','playl
 
           })
 
+           .state('app.announcements', {
+            url: '/announcements',
+            cache: false,
+            views: {
+              'menuContent': {
+                templateUrl: 'app/announcements/announcements.html',
+                controller: 'announcementsCtrl',
+
+              }
+            }
+
+          })
+
           ;
       // if none of the above states are matched, use this as the fallback
       $urlRouterProvider.otherwise('/app/videos');
 
 
-      var config = {
-        apiKey: "AIzaSyAO1uZYz57IlIaP1qNfYFRoYLD87Xvg6SQ",
-        databaseURL: "https://baxterpoc-9ccff.firebaseio.com",
-        projectId: "baxterpoc-9ccff",
-        storageBucket: "baxterpoc-9ccff.appspot.com",
-        messagingSenderId: "979087637880"
-      };
-      firebase.initializeApp(config);
+      // var config = {
+      //   apiKey: "AIzaSyAO1uZYz57IlIaP1qNfYFRoYLD87Xvg6SQ",
+      //   databaseURL: "https://baxterpoc-9ccff.firebaseio.com",
+      //   projectId: "baxterpoc-9ccff",
+      //   storageBucket: "baxterpoc-9ccff.appspot.com",
+      //   messagingSenderId: "979087637880"
+      // };
+      // firebase.initializeApp(config);
     });

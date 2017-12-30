@@ -1,0 +1,14 @@
+<ion-view view-title="Announcements">
+    <ion-content class="masters">
+        <div class="card" ng-repeat="announcement in announcements" ng-click="onClick(appointment)">
+            <div class="row">
+            <!--<div style="width:35%"> <img src={{appointment.snippet.thumbnails.high.url}}  style="width:100%"></img></div>-->
+                
+                <div class="appointments-header" style="width:65%"> {{announcement.announcement}}
+                </div>
+                
+               
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
