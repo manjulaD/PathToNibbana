@@ -13,4 +13,5 @@ Java - v 8
 2.If you have Ionic 1 configured in your machine, cloning the project and run 'ionic serve' command in the root directory will load the app in the browser
 
 3.'ionic platform add android' will add android platform
+
 4. 'ionic run android' will load the app in plugged in android device or simulator
